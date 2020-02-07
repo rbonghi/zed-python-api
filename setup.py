@@ -35,6 +35,9 @@ import setup_build
 here = path.abspath(path.dirname(__file__))
 project_homepage = "https://github.com/rbonghi/zed-python-api"
 
+with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
+    requirements = f.read().splitlines()
+
 # Get the long description from the README file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
@@ -70,7 +73,7 @@ setup(name="pyzed",
       cmdclass = {
           'build_ext': setup_build.pyzed_build_ext,
       },
-      #install_requires=requirements,
+      install_requires=requirements,
       #ext_modules=extensions
 )
 # EOF
