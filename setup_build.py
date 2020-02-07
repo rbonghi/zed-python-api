@@ -18,6 +18,10 @@
 #
 ########################################################################
 
+# Reference
+# https://github.com/h5py/h5py/blob/master/setup.py
+# https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html
+
 try:
     from setuptools import Extension
 except ImportError:
